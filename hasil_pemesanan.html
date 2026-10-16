@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      background: #fbe;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 10px 15px;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      text-align: center;
+      text-transform: uppercase;
+      border-bottom: 1px solid #7fb2c9;
+      padding-bottom: 6px;
+    }
+    h2 {
+      color: #12a;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .info {
+      margin-left: 35px;
+      line-height: 1.4;
+    }
+    footer {
+      border-top: 1px solid #d9a;
+      margin-top: 25px;
+      padding-top: 6px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Thank You</h1>
+
+  <p>
+    Terimakasih telah memesan barang di toko kami🙏🏻
+  </p>
+
+  <h2>Your Information</h2>
+  <div class="info">
+    <strong>Nama Produk:</strong> <span id="name"></span><br>
+    <strong>Deskripsi:</strong> <span id="description"></span><br>
+    <strong>Nomor Akun:</strong> <span id="Account no"></span><br>
+   <strong>Tipe Pembayaran:</strong> <span id="payment_type"></span><br>
+    <strong>Pengguna Akun:</strong> <span id="account_holder"></span>
+  </div>
+
+  <p>
+
+  <footer>Pesananmu akan segera di kirim.</footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    function show(id, value) {
+      // textContent supaya input user tidak dieksekusi sebagai HTML
+      document.getElementById(id).textContent = value || "-";
+    }
+
+    show("name", params.get("name"));
+    show("description", params.get("description"));
+    show("Account no", params.get("Account no"));
+    show("payment_type", params.get("payment_type"));
+    show("account_holder", params.get("account_holder"));
+    </script>
+</body>
+</html>
