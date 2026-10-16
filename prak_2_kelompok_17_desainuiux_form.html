@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pemesanan Barang</title>
+</head>
+
+<body>
+  <h2>Pemesanan Barang</h2>
+  <hr>
+
+  <form action="hasil_pemesanan.html" method="get">
+    <table cellpadding="4">
+      <tr>
+        <td rowspan="12" valign="top">
+          <img src="image/pouchrajut.jpeg" alt="Gambar Produk" width="200" height="160"><br><br>
+          <h>pouch rajut</h>
+        </td>
+      <span></span>
+        <td align="right" valign="top"><label for="name">Nama Produk: </label></td>
+        <td><input type="text" id="name" name="name" placeholder="Masukkan Nama Produk"></td>
+      </tr>
+      <tr>
+        <td align="right" valign="top"><label for="description">Deskripsi: </label></td>
+        <td>
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            cols="50"
+            maxlength="400"
+            placeholder="Tidak Lebih dari 400 Karakter">
+          </textarea>
+        </td>
+      </tr>
+      <tr>
+        <td align="right"><label for="Account no">Nomor Akun :</label></td>
+        <td><input type="text" id="Account no" name="Account no" placeholder="Isi Nomor Akun" size="35"></td>
+      </tr>
+      <tr>
+        <td align="right"><label for="payment_type">Tipe Pembayaran :</label></td>
+        <td>
+          <select id="payment_type" name="payment_type">
+            <option value="Bank Transfer" selected>Bank Transfer</option>
+            <option value="Gopay">Gopay</option>
+            <option value="Dana">Dana</option>
+            <option value="ShopeePay">ShopeePay</option>
+            <option value="Qris">Qris</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td align="right"><label for="account_holder">Pengguna Akun :</label></td>
+        <td><input type="text" id="account_holder" name="account_holder" placeholder="Isi Nama Anda" size="35"></td>
+      </tr>
+      <tr>
+        <td align="right"><label for="jumlah">Jumlah Transaksi :</label></td>
+        <td><input type="number" id="jumlah" name="jumlah" min="1" max="10" size="35" value="1"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="checkbox" id="send_mobile" name="send_mobile" checked>
+          <label for="send_mobile">Kirim ke Nomor Telepon</label>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="checkbox" id="send_email" name="send_email" checked>
+          <label for="send_email">Kirim Salinan Transaksi ke Email</label>
+        </td>
+      </tr>
+      <tr>
+        <td align="right"><label for="phone">Kirim ke Nomor Telepon :</label></td>
+         <td><input type="text" id="phone" name="phone" placeholder="Isi Nomor Telepon" size="35"></td>
+      </tr>
+      <tr>
+        <td align="right"><label for="email">Kirim Salinan Transaksi ke Email :</label></td>
+        <td><input type="text" id="email" name="email" placeholder="Isi Alamat Email" size="35"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="Submit" value="Submit">
+          <input type="Reset" value="Reset">
+        </td>
+      </tr>
+    </form>
+
+</body>
+</html>
